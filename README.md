@@ -5,9 +5,21 @@ Built configuration for easy `nvim` setup. Minimalistic.
 ## Installation (New Machine)
 
 ### macOS
-brew install neovim
-brew install ripgrep
-brew install fzf
+
+`brew install neovim`
+
+`brew install ripgrep`
+
+`brew install fzf`
+
+Download autocomplete - `curl https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash -o ~/.git-completion.bash`
+
+Update bashrc - 
+```
+if [ -f ~/.git-completion.bash ]; then
+. ~/.git-completion.bash
+fi
+```
 
 ### Linux (Ubuntu/Debian)
 sudo apt update
