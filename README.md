@@ -17,14 +17,7 @@ Everything should just work out of the box.
 
 `brew install fzf`
 
-Download autocomplete - `curl https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash -o ~/.git-completion.bash`
-
-Update bashrc - 
-```
-if [ -f ~/.git-completion.bash ]; then
-. ~/.git-completion.bash
-fi
-```
+Download git autocomplete and set up `echo 'autoload -Uz compinit && compinit' >> ~/.zshrc && . ~/.zshrc`
 
 ### Linux (Ubuntu/Debian)
 sudo apt update
