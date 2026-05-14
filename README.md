@@ -4,6 +4,7 @@ Built configuration for easy `nvim` setup. Minimalistic.
 
 ## TLDR
 Run this command `git clone https://github.com/mohit2530/ak47-lua-config ~/.config/nvim`.
+
 Everything should just work out of the box.
 
 ## Installation (New Machine)
