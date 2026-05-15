@@ -72,6 +72,29 @@ require("lazy").setup({
     end,
   },
 
+  -- conform formatting for prettier
+  {
+  "stevearc/conform.nvim",
+    config = function()
+      require("conform").setup({
+        formatters_by_ft = {
+          javascript = { "prettier" },
+          typescript = { "prettier" },
+          javascriptreact = { "prettier" },
+          typescriptreact = { "prettier" },
+          json = { "prettier" },
+          html = { "prettier" },
+          css = { "prettier" },
+        },
+
+        format_on_save = {
+          timeout_ms = 2000,
+          lsp_fallback = true,
+        },
+      })
+    end,
+  },
+
   -- LSP (NEW API ONLY)
   {
     "neovim/nvim-lspconfig",
@@ -135,3 +158,14 @@ require("lazy").setup({
   { "hrsh7th/cmp-path" },
 
 })
+
+-- =========================
+-- CUSTOM COMMANDS
+-- =========================
+
+-- format and save
+  vim.keymap.set("n", "<leader>w", function()
+    vim.lsp.buf.format({ async = false })
+    vim.cmd("write")
+  end)
+
